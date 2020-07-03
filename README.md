@@ -57,6 +57,18 @@ Review Checklist:
 
 # Git Common Commands
 
+## update all git repo in a folder
+```
+for D in ./*; do
+    if [ -d "$D" ]; then
+        cd "$D"
+        git checkout master
+        git pull
+        cd ..
+    fi
+done
+```
+
 ## Root Git Release
 ```
 cd root
